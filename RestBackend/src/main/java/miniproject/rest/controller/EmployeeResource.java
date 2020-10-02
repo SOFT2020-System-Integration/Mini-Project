@@ -24,7 +24,7 @@ public class EmployeeResource {
     @Autowired
     EmployeeRepository repo;
 
-    @GetMapping("/employees")
+    @GetMapping("/employees")sim
     public List<Employee> retrieveAllEmployees()
     {
         return repo.findAll();
