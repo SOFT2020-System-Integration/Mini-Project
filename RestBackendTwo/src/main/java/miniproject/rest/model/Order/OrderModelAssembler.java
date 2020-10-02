@@ -1,9 +1,6 @@
 package miniproject.rest.model.Order;
 
 import miniproject.rest.controller.OrderController;
-import miniproject.rest.model.Employee.Employee;
-import miniproject.rest.model.Order.Order;
-import miniproject.rest.model.Order.Status;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
