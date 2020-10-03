@@ -1,7 +1,6 @@
-package miniproject.rest.model.Employee;
+package miniproject.rest.model.employee;
 
 import miniproject.rest.controller.EmployeeController;
-import miniproject.rest.model.Employee.Employee;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;

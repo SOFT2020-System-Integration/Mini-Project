@@ -1,4 +1,4 @@
-package miniproject.rest.model.Order;
+package miniproject.rest.model.order;
 
 public enum Status {
     IN_PROGRESS,

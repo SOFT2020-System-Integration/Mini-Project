@@ -1,4 +1,4 @@
-package miniproject.rest.model.Order;
+package miniproject.rest.model.order;
 
 import javax.persistence.*;
 import java.util.Objects;

@@ -1,9 +1,9 @@
 package miniproject.rest.controller;
 
 
-import miniproject.rest.model.Employee.EmployeeModelAssembler;
-import miniproject.rest.exceptions.Employee.EmployeeNotFoundException;
-import miniproject.rest.model.Employee.Employee;
+import miniproject.rest.model.employee.EmployeeModelAssembler;
+import miniproject.rest.exceptions.employee.EmployeeNotFoundException;
+import miniproject.rest.model.employee.Employee;
 import miniproject.rest.repository.EmployeeRepository;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -98,4 +98,5 @@ public class EmployeeController {
         repo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
 }

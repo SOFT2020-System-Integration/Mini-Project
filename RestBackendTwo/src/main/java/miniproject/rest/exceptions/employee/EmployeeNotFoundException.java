@@ -1,4 +1,4 @@
-package miniproject.rest.exceptions.Employee;
+package miniproject.rest.exceptions.employee;
 
 public class EmployeeNotFoundException extends RuntimeException{
     public EmployeeNotFoundException(Long id) {

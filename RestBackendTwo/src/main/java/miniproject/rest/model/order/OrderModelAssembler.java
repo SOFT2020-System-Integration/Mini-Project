@@ -1,4 +1,4 @@
-package miniproject.rest.model.Order;
+package miniproject.rest.model.order;
 
 import miniproject.rest.controller.OrderController;
 import org.springframework.hateoas.EntityModel;

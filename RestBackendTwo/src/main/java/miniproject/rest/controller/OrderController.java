@@ -1,9 +1,9 @@
 package miniproject.rest.controller;
 
-import miniproject.rest.exceptions.Order.OrderNotFoundException;
-import miniproject.rest.model.Order.Order;
-import miniproject.rest.model.Order.OrderModelAssembler;
-import miniproject.rest.model.Order.Status;
+import miniproject.rest.exceptions.order.OrderNotFoundException;
+import miniproject.rest.model.order.Order;
+import miniproject.rest.model.order.OrderModelAssembler;
+import miniproject.rest.model.order.Status;
 import miniproject.rest.repository.OrderRepository;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;

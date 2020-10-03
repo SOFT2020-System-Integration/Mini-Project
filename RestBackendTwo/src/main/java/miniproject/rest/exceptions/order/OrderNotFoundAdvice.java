@@ -1,21 +1,18 @@
-package miniproject.rest.exceptions.Employee;
+package miniproject.rest.exceptions.order;
 
-import miniproject.rest.exceptions.Employee.EmployeeNotFoundException;
+import miniproject.rest.exceptions.employee.EmployeeNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-//This is used to render a HTTP 404
-
 @ControllerAdvice
-public class EmployeeNotFoundAdvice {
-
+public class OrderNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(EmployeeNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String employeeNotFoundHandler(EmployeeNotFoundException ex) {
+    String orderNotFoundHandler(OrderNotFoundException ex) {
         return ex.getMessage();
     }
 }
