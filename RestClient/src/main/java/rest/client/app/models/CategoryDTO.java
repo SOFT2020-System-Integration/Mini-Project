@@ -1,30 +1,21 @@
-package miniproject.rest.model.order;
+package rest.client.app.models;
 
-import javax.persistence.*;
+import java.util.List;
 
-@Entity
-@Table(name = "ITEMS")
-public class Item {
-    @Id @GeneratedValue Long id;
-    String name;
-    String description;
+public class CategoryDTO {
+    private Long id;
+    private String name;
+    private String description;
+    private List<ProductDTO> products;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name="cart_id", nullable = false)
-    private Cart cart;
-
-    public Item() {
+    public CategoryDTO() {
     }
 
-    public Item(String name, String description) {
+    public CategoryDTO(Long id, String name, String description, List<ProductDTO> products) {
+        this.id = id;
         this.name = name;
         this.description = description;
-    }
-
-    public Item(String name, String description, Cart cart) {
-        this.name = name;
-        this.description = description;
-        this.cart = cart;
+        this.products = products;
     }
 
     public Long getId() {
@@ -51,20 +42,21 @@ public class Item {
         this.description = description;
     }
 
-    public Cart getCart() {
-        return cart;
+    public List<ProductDTO> getProducts() {
+        return products;
     }
 
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public void setProducts(List<ProductDTO> products) {
+        this.products = products;
     }
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "CategoryDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", products=" + products +
                 '}';
     }
 }

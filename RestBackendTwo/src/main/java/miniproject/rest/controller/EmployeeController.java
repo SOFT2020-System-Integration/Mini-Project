@@ -5,6 +5,7 @@ import miniproject.rest.model.employee.EmployeeModelAssembler;
 import miniproject.rest.exceptions.employee.EmployeeNotFoundException;
 import miniproject.rest.model.employee.Employee;
 import miniproject.rest.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -18,19 +19,20 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/employee")
 public class EmployeeController {
 
     private final EmployeeRepository repo;
     private final EmployeeModelAssembler assembler;
 
+    @Autowired
     EmployeeController(EmployeeRepository repo, EmployeeModelAssembler assembler) {
         this.repo = repo;
         this.assembler = assembler;
     }
 
     //Root
-    @GetMapping("/employees")
+    @GetMapping("")
     public CollectionModel<EntityModel<Employee>> getAllEmployees() {
         List<EntityModel<Employee>> emp = repo.findAll().stream()
                 .map(assembler :: toModel)
@@ -48,7 +50,7 @@ public class EmployeeController {
     }
 
     //Get Employee by id
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     public EntityModel<Employee> getEmployeeById(@PathVariable Long id) {
 
         Employee emp = repo.findById(id) //
@@ -62,7 +64,7 @@ public class EmployeeController {
     }
 
     //Post Employee
-    @PostMapping("/employees")
+    @PostMapping("")
     public ResponseEntity<?> addNewEmployee(@RequestBody Employee newEmployee) {
         EntityModel<Employee> entityModel = assembler.toModel(repo.save(newEmployee));
         return ResponseEntity
@@ -71,7 +73,7 @@ public class EmployeeController {
     }
 
     //Update Employee
-    @PutMapping("/employees/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<?> updateEmployee(@RequestBody Employee emp, @PathVariable Long id) {
         Employee updatedEmp =  repo.findById(id)
                 .map(employee -> {
@@ -93,7 +95,7 @@ public class EmployeeController {
     }
 
     //Delete Employee
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteEmployeeById(@PathVariable Long id) {
         repo.deleteById(id);
         return ResponseEntity.noContent().build();
