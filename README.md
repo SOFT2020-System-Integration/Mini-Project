@@ -24,6 +24,11 @@ The backend is developed using spring hateoas. After running the restapplication
 Our business case is to create a REST service where you can put items in a cart using rest. This can be used for e.g. a webstore or even in a storage managment system.
 
 ## Execution
-Open `RestBackendAndClient` in your favorite IDE, we used intelliJ.
+### Rest
+Open the `RestBackendAndClient` project in your favorite IDE, we used intelliJ.
 * To start the rest service, run the `RestApplication.java` class. This will start a local database through spring.  
 * To start the client, run the `ClientApplication.java` class. This will run in your terminal and show some simple crud functions on our api.
+
+### SOAP
+Open the `SOAP` project in your favoite IDE, use used intelliJ.
+Run the `IPTester` class and it should show a list of geolocations.
