@@ -1,10 +1,10 @@
 package miniproject.rest.controller;
 
-import miniproject.rest.exceptions.cart.CartNotFoundException;
-import miniproject.rest.exceptions.cart.ItemNotFoundException;
-import miniproject.rest.model.order.Cart;
-import miniproject.rest.model.order.Item;
-import miniproject.rest.model.order.ItemModelAssembler;
+import miniproject.rest.exceptions.CartNotFoundException;
+import miniproject.rest.exceptions.ItemNotFoundException;
+import miniproject.rest.model.Cart;
+import miniproject.rest.model.Item;
+import miniproject.rest.model.ItemModelAssembler;
 import miniproject.rest.repository.CartRepository;
 import miniproject.rest.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +50,7 @@ public class ItemController {
         return assembler.toModel(item);
     }
 
-    /*@PostMapping("")
+    @PostMapping("")
     public ResponseEntity<EntityModel<Item>> createNewItem(@RequestBody Item item) {
         Item newItem = item;
         repo.save(newItem);
@@ -98,5 +98,4 @@ public class ItemController {
         repo.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-*/
 }

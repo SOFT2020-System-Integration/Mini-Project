@@ -1,9 +1,8 @@
 package miniproject.rest.repository;
 
-import miniproject.rest.model.order.Cart;
-import miniproject.rest.model.order.Item;
+import miniproject.rest.model.Cart;
+import miniproject.rest.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.domain.Sort;
 
 import java.util.List;
 

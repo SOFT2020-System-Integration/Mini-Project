@@ -1,9 +1,9 @@
 package miniproject.rest.controller;
 
-import miniproject.rest.exceptions.cart.CartNotFoundException;
-import miniproject.rest.model.order.Cart;
-import miniproject.rest.model.order.CartModelAssembler;
-import miniproject.rest.model.order.Status;
+import miniproject.rest.exceptions.CartNotFoundException;
+import miniproject.rest.model.Cart;
+import miniproject.rest.model.CartModelAssembler;
+import miniproject.rest.model.Status;
 import miniproject.rest.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
