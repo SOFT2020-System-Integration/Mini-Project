@@ -2,10 +2,10 @@
 
 System Integration fall 2020
 
-Thomas Stevns Nielsen Ebsen  
-Andreas Duelund Jørgensen  
-Jonas Björk Hein  
-Jonatan Magnus Bakke  
+- Andeas Jørgensen - https://github.com/DDomino
+- Jonatan Bakke https://github.com/JonatanMagnusBakke
+- Jonas Hein - https://github.com/Zenzus
+- Thomas Ebsen - https://github.com/Srax   
 
 # Objectives
 The task is to create an application which makes use of web services.
